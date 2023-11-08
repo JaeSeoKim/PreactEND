@@ -1,10 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import { h } from "pretand-react"
+import { createRoot } from "pretand-react/client"
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+const root = createRoot(document.getElementById("root")!)
+
+root.render(
+  <div style={{ fontSize: "3rem" }}>
+    <b style={{ color: "red" }}>hello</b> world!
+  </div>,
 )

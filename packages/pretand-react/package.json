@@ -1,5 +1,5 @@
 {
-  "name": "sample-lib",
+  "name": "pretand-react",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -11,6 +11,10 @@
     ".": {
       "import": "./src/index.ts",
       "require": "./src/index.ts"
+    },
+    "./client": {
+      "import": "./src/client.ts",
+      "require": "./src/client.ts"
     },
     "./package.json": "./package.json"
   },
@@ -34,17 +38,11 @@
     "@configs/eslint-config": "workspace:^",
     "@configs/rollup": "workspace:*",
     "@types/node": "^20.5.6",
-    "@types/react": "^18.2.21",
-    "@types/react-dom": "^18.2.7",
+    "@types/react": "^18.2.37",
     "eslint": "^8.48.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "rimraf": "^5.0.1",
     "rollup": "^3.28.1",
     "typescript": "^5.2.2"
-  },
-  "peerDependencies": {
-    "react": "^16.8 || ^17 || ^18"
   },
   "publishConfig": {
     "type": "module",
@@ -53,6 +51,11 @@
         "import": "./esm/index.js",
         "require": "./dist/index.cjs",
         "types": "./types/index.d.ts"
+      },
+      "./client": {
+        "import": "./esm/client.js",
+        "require": "./dist/client.cjs",
+        "types": "./types/client.d.ts"
       },
       "./package.json": "./package.json"
     },
