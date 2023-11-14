@@ -19,31 +19,31 @@ export function createRoot(
 }
 
 class RootContainer {
-  private readonly element: Element | DocumentFragment
+  readonly #element: Element | DocumentFragment
   // @ts-ignore
-  private readonly options: createRootOptions
-  private root: Node[] | null = null
+  readonly #options: createRootOptions
+  #root: Node[] | null = null
 
   constructor(
     element: Element | DocumentFragment,
     options?: createRootOptions,
   ) {
-    this.element = element
-    this.options = options ?? {}
+    this.#element = element
+    this.#options = options ?? {}
   }
 
   render(node: PreactENDNode): void {
-    if (this.root) {
+    if (this.#root) {
       this.unmount()
     }
-    this.root = this.interanlRender(node, this.element)
+    this.#root = this.interanlRender(node, this.#element)
   }
   unmount(): void {
-    if (this.root) {
-      for (const node of this.root) {
-        this.element.removeChild(node)
+    if (this.#root) {
+      for (const node of this.#root) {
+        this.#element.removeChild(node)
       }
-      this.root = null
+      this.#root = null
     }
   }
 
