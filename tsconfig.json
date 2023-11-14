@@ -16,7 +16,6 @@
 
     /* Language and Environment */
     "experimentalDecorators": true,
-    "jsx": "react-jsx",
     "lib": ["dom", "dom.iterable", "ESNext", "ESNext.AsyncIterable"],
     "target": "es6",
 

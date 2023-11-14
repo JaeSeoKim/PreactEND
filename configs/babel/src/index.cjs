@@ -5,11 +5,8 @@ module.exports = {
     [
       require.resolve("@babel/preset-react"),
       {
-        pragma: "createElement",
-        pragmaFrag: "Fragment",
-        throwIfNamespace: false,
-        runtime: "classic",
-        importSource: "pretand-react",
+        runtime: "automatic",
+        importSource: "preactend",
       },
     ],
   ],

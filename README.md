@@ -1,1 +1,1 @@
-# pretand-react
+./packages/preactend/README.md

@@ -1,9 +1,17 @@
 {
-  "name": "pretand-react",
-  "version": "1.0.0",
+  "name": "preactend",
+  "version": "0.1.0",
   "description": "",
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "pretend react",
+    "TypeScript"
+  ],
+  "author": "JaeSeoKim <hello@jaeseokim.dev>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JaeSeoKim/PreactEND.git",
+    "directory": "packages/preactend"
+  },
   "license": "MIT",
   "main": "./src/index.ts",
   "type": "module",
@@ -12,9 +20,13 @@
       "import": "./src/index.ts",
       "require": "./src/index.ts"
     },
-    "./client": {
-      "import": "./src/client.ts",
-      "require": "./src/client.ts"
+    "./jsx-runtime": {
+      "import": "./src/jsx-runtime/index.ts",
+      "require": "./src/jsx-runtime/index.ts"
+    },
+    "./dom/client": {
+      "import": "./src/dom/client/index.ts",
+      "require": "./src/dom/client/index.ts"
     },
     "./package.json": "./package.json"
   },
@@ -31,18 +43,20 @@
     "watch": "rollup -c -w",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "typecheck": "tsc --noEmit",
+    "test": "vitest",
     "prepack": "run-s build"
   },
   "devDependencies": {
     "@configs/babel": "workspace:*",
     "@configs/eslint-config": "workspace:^",
     "@configs/rollup": "workspace:*",
-    "@types/node": "^20.5.6",
-    "@types/react": "^18.2.37",
-    "eslint": "^8.48.0",
-    "rimraf": "^5.0.1",
-    "rollup": "^3.28.1",
-    "typescript": "^5.2.2"
+    "@types/node": "^20.9.0",
+    "eslint": "^8.53.0",
+    "happy-dom": "^12.10.3",
+    "rimraf": "^5.0.5",
+    "rollup": "^3.29.4",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
   },
   "publishConfig": {
     "type": "module",
@@ -52,10 +66,15 @@
         "require": "./dist/index.cjs",
         "types": "./types/index.d.ts"
       },
-      "./client": {
-        "import": "./esm/client.js",
-        "require": "./dist/client.cjs",
-        "types": "./types/client.d.ts"
+      "./jsx-runtime": {
+        "import": "./esm/jsx-runtime/index.js",
+        "require": "./dist/jsx-runtime/index.cjs",
+        "types": "./types/jsx-runtime/index.cjs"
+      },
+      "./dom/client": {
+        "import": "./esm/dom/client/index.js",
+        "require": "./dist/dom/client/index.cjs",
+        "types": "./types/dom/client/index.cjs"
       },
       "./package.json": "./package.json"
     },
