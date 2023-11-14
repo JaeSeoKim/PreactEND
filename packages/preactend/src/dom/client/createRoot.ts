@@ -90,11 +90,9 @@ class RootContainer {
         )
       }
     } else if (node && typeof node !== "boolean") {
-      const $fragment = document.createDocumentFragment()
-      $fragment.append(node.toString())
-      const children = [...$fragment.children]
-      target.append($fragment)
-      return children
+      const $text = document.createTextNode(node.toString())
+      target.append($text)
+      return [$text]
     }
     return []
   }
