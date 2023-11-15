@@ -13,7 +13,7 @@ PreactEND는 pretend + React의 합성어로 React의 기능을 동일하게 유
 
 #### JSX syntax
 
-**JSX** `classic`, `automatic` 모드를 호환하며 `createElement`, `Fragment` 함수 제공 및  `jsx-runtime (without dev mode)` 를 제공합니다.
+**JSX** `classic`, `automatic` 모드를 호환하며 `createElement`, `Fragment` 함수 제공 및 `jsx-runtime (without dev mode)` 를 제공합니다.
 
 #### Dom renderer
 

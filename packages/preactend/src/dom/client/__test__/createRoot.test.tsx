@@ -122,14 +122,8 @@ test("test unmount() after render()", () => {
 
 test("test unmount() with primitive type", () => {
   const root = createRoot(document.getElementById("root") as unknown as Element)
-  root.render(
-    <>
-      Hello World!
-    </>,
-  )
-  expect(document.getElementById("root")!.innerHTML).toBe(
-    `Hello World!`,
-  )
+  root.render(<>Hello World!</>)
+  expect(document.getElementById("root")!.innerHTML).toBe(`Hello World!`)
 
   root.unmount()
   expect(document.getElementById("root")!.innerHTML).toBe("")

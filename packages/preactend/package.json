@@ -78,7 +78,7 @@
         "types": "./types/dom/client/index.cjs"
       },
       "./package.json": "./package.json",
-      "registry":"https://npm.pkg.github.com"
+      "registry": "https://npm.pkg.github.com"
     },
     "main": "./dist/index.cjs",
     "module": "./esm/index.js",

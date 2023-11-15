@@ -33,15 +33,12 @@ test("test creatElement with children", () => {
     },
     children: children,
   })
-  const element = jsx(
-    "div",
-    {
-      style: {
-        color: "red",
-      },
-      children
+  const element = jsx("div", {
+    style: {
+      color: "red",
     },
-  )
+    children,
+  })
   expect(element).toEqual(targetElement)
 })
 
