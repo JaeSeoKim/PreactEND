@@ -13,7 +13,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "@jaeseokim/preactend",
+    "jsxImportSource": "@devjaeseo/preactend",
     // "jsxFactory": "createElement",
     // "jsxFragmentFactory": "Fragment",
     /* Linting */

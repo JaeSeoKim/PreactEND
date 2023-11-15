@@ -70,12 +70,12 @@
       "./jsx-runtime": {
         "import": "./esm/jsx-runtime/index.js",
         "require": "./dist/jsx-runtime/index.cjs",
-        "types": "./types/jsx-runtime/index.cjs"
+        "types": "./types/jsx-runtime/index.d.ts"
       },
       "./dom/client": {
         "import": "./esm/dom/client/index.js",
         "require": "./dist/dom/client/index.cjs",
-        "types": "./types/dom/client/index.cjs"
+        "types": "./types/dom/client/index.d.ts"
       },
       "./package.json": "./package.json",
       "registry": "https://npm.pkg.github.com"

@@ -1,5 +1,5 @@
-import { Fragment } from "@jaeseokim/preactend"
-import { createRoot } from "@jaeseokim/preactend/dom/client"
+import { Fragment } from "@devjaeseo/preactend"
+import { createRoot } from "@devjaeseo/preactend/dom/client"
 
 const root = createRoot(document.getElementById("root")!)
 
