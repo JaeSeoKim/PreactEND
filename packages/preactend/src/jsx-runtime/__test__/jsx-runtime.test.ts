@@ -1,7 +1,7 @@
 import { test, expect } from "vitest"
-import { FPreactENDElement } from "../PreactENDElement"
-import { createElement } from "../createElement"
-import { jsx } from "../jsx-runtime"
+import { FPreactENDElement } from "../../PreactENDElement"
+import { createElement } from "../../createElement"
+import { jsx } from "../../jsx-runtime"
 
 test("test basic creatElement", () => {
   const targetElement = FPreactENDElement("div", null, null, {

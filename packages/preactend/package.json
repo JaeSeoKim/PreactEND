@@ -78,8 +78,7 @@
         "require": "./dist/client/index.cjs",
         "types": "./types/client/index.d.ts"
       },
-      "./package.json": "./package.json",
-      "registry": "https://npm.pkg.github.com"
+      "./package.json": "./package.json"
     },
     "main": "./dist/index.cjs",
     "module": "./esm/index.js",
