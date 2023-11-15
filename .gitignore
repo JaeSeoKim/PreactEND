@@ -9,6 +9,7 @@ _node_modules
 # build
 dist
 esm
+types
 
 stats.html
 
