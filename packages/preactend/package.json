@@ -33,7 +33,8 @@
   },
   "files": [
     "dist",
-    "esm"
+    "esm",
+    "types"
   ],
   "scripts": {
     "clean": "rimraf dist/ esm/ types/",
