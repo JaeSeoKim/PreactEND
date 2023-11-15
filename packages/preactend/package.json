@@ -1,6 +1,6 @@
 {
   "name": "@devjaeseo/preactend",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "implementing the same features of React in a similar way",
   "private": false,
   "keywords": [
