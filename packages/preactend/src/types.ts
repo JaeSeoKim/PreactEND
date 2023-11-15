@@ -35,3 +35,17 @@ type FragmentProps = {
   children?: PreactENDNode | PreactENDNode[]
 }
 export type Fragment = (props: FragmentProps) => PreactENDElement
+
+// eslint-disable-next-line @typescript-eslint/no-namespace
+export declare namespace JSX {
+  type IntrinsicElements = {
+    [elemName in keyof HTMLElementTagNameMap]: Partial<
+      Omit<Omit<HTMLElementTagNameMap[elemName], "style">, "children"> & {
+        style?: Partial<CSSStyleDeclaration>
+        children?: PreactENDNode | PreactENDNode[]
+      }
+    >
+  }
+}
+
+export declare type JSXElement<P> = PreactENDElementConstructor<P>

@@ -1,5 +1,5 @@
 import { Fragment } from "@devjaeseo/preactend"
-import { createRoot } from "@devjaeseo/preactend/dom/client"
+import { createRoot } from "@devjaeseo/preactend/client"
 
 const root = createRoot(document.getElementById("root")!)
 
@@ -22,6 +22,3 @@ export const TestComponent = () => (
   </Fragment>
 )
 root.render(<TestComponent />)
-
-// @ts-ignore
-window.__root = root

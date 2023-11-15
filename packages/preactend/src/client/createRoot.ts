@@ -1,8 +1,8 @@
 import {
   PREACTEND_ELEMENT_TYPE,
   PREACTEND_FRAGMENT_TYPE,
-} from "../../PreactENDSymbols"
-import { PreactENDElementConstructor, PreactENDNode } from "../../types"
+} from "../PreactENDSymbols"
+import { PreactENDElementConstructor, PreactENDNode } from "../types"
 
 type Root = {
   render(node: PreactENDNode): void

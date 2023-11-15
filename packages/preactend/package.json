@@ -25,9 +25,9 @@
       "import": "./src/jsx-runtime/index.ts",
       "require": "./src/jsx-runtime/index.ts"
     },
-    "./dom/client": {
-      "import": "./src/dom/client/index.ts",
-      "require": "./src/dom/client/index.ts"
+    "./client": {
+      "import": "./src/client/index.ts",
+      "require": "./src/client/index.ts"
     },
     "./package.json": "./package.json"
   },
@@ -73,10 +73,10 @@
         "require": "./dist/jsx-runtime/index.cjs",
         "types": "./types/jsx-runtime/index.d.ts"
       },
-      "./dom/client": {
-        "import": "./esm/dom/client/index.js",
-        "require": "./dist/dom/client/index.cjs",
-        "types": "./types/dom/client/index.d.ts"
+      "./client": {
+        "import": "./esm/client/index.js",
+        "require": "./dist/client/index.cjs",
+        "types": "./types/client/index.d.ts"
       },
       "./package.json": "./package.json",
       "registry": "https://npm.pkg.github.com"
