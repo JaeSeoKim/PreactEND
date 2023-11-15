@@ -45,7 +45,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "typecheck": "tsc --noEmit",
     "test": "vitest",
-    "prepack": "run-s build"
+    "prepack": "pnpm run build"
   },
   "devDependencies": {
     "@configs/babel": "workspace:*",
