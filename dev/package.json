@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@jaeseokim/preactend": "workspace:^"
+    "@devjaeseo/preactend": "workspace:^"
   },
   "devDependencies": {
     "@configs/eslint-config": "workspace:^",

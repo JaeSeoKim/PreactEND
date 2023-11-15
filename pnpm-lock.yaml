@@ -98,7 +98,7 @@ importers:
 
   dev:
     dependencies:
-      '@jaeseokim/preactend':
+      '@devjaeseo/preactend':
         specifier: workspace:^
         version: link:../packages/preactend
     devDependencies:
