@@ -1,7 +1,8 @@
 {
-  "name": "preactend",
+  "name": "@jaeseokim/preactend",
   "version": "0.1.0",
-  "description": "",
+  "description": "implementing the same features of React in a similar way",
+  "private": false,
   "keywords": [
     "pretend react",
     "TypeScript"
@@ -76,7 +77,8 @@
         "require": "./dist/dom/client/index.cjs",
         "types": "./types/dom/client/index.cjs"
       },
-      "./package.json": "./package.json"
+      "./package.json": "./package.json",
+      "registry":"https://npm.pkg.github.com"
     },
     "main": "./dist/index.cjs",
     "module": "./esm/index.js",

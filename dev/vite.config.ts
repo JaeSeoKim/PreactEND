@@ -5,7 +5,7 @@ export default defineConfig({
   esbuild: {
     jsx: "automatic",
     jsxDev: false,
-    jsxImportSource: "preactend",
+    jsxImportSource: "@jaeseokim/preactend",
     // jsxFactory: "createElement",
     // jsxFragment: "Fragment",
   },

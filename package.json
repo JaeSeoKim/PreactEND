@@ -15,7 +15,6 @@
   "devDependencies": {
     "@configs/babel": "workspace:*",
     "@configs/prettier": "workspace:*",
-    "preactend": "workspace:*",
     "prettier": "^3.1.0",
     "typescript": "^5.2.2"
   }
