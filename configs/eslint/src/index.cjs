@@ -16,6 +16,7 @@ module.exports = {
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "react-hooks/exhaustive-deps": "error",
+    "react/no-unknown-property": "off",
   },
   settings: {
     "import/resolver": {

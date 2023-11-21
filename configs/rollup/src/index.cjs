@@ -20,7 +20,7 @@ exports.generateRollupConfig = function generateRollupConfig({
   }
 
   const entrypoints = Object.keys(packageJSON.exports).filter(
-    (path) => path !== "./package.json",
+    (path) => typeof packageJSON.exports[path] !== "string",
   )
 
   const externals = [

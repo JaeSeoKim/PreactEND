@@ -16,9 +16,12 @@ export type PreactENDElementType =
   | PreactENDElementConstructor<any>
   | typeof PREACTEND_FRAGMENT_TYPE
 
-export type PreactENDElement<P extends object = any> = {
+export type PreactENDElement<
+  P extends object = any,
+  T extends PreactENDElementType = PreactENDElementType,
+> = {
   $$typeof: PreactENDSymbols
-  type: PreactENDElementType
+  type: T
   props: P
   key?: string | null
   ref?:
@@ -40,7 +43,7 @@ export type Fragment = (props: FragmentProps) => PreactENDElement
 export declare namespace JSX {
   type IntrinsicElements = {
     [elemName in keyof HTMLElementTagNameMap]: Partial<
-      Omit<Omit<HTMLElementTagNameMap[elemName], "style">, "children"> & {
+      Omit<HTMLElementTagNameMap[elemName], "style" | "children"> & {
         style?: Partial<CSSStyleDeclaration>
         children?: PreactENDNode | PreactENDNode[]
       }
