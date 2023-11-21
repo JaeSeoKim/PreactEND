@@ -55,7 +55,7 @@ class RootContainer {
     node: PreactENDNode,
     target: Element | DocumentFragment,
   ): Node[] {
-    if (isVailedElementOrIterableNode(node)) {
+    if (isElementOrIterableNode(node)) {
       if (isIterable(node)) {
         return this._renderIterable(node, target)
       }
@@ -129,7 +129,7 @@ class RootContainer {
   }
 }
 
-function isVailedElementOrIterableNode(
+function isElementOrIterableNode(
   node: PreactENDNode,
 ): node is PreactENDElement | Iterable<PreactENDElement> {
   return typeof node === "object" && node !== null
