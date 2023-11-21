@@ -3,7 +3,7 @@
 
 import { test, expect, beforeEach } from "vitest"
 import { createRoot } from "../createRoot"
-import { createElement, Fragment } from "../../../index"
+import { createElement, Fragment, JSXElement } from "../../../"
 
 beforeEach(() => {
   document.body.innerHTML = '<div id="root"></div>'

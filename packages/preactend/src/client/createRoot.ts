@@ -92,7 +92,7 @@ class RootContainer {
     target: Element | DocumentFragment,
   ): Node[] {
     switch (true) {
-      case isPragment(node):
+      case isFragment(node):
         return this._render(node.props.children, target)
       case isFunctionComponent(node):
         return this._render(node.type(node.props), target)
@@ -145,7 +145,7 @@ function isVailedElement(node: PreactENDElement) {
   return node.$$typeof === PREACTEND_ELEMENT_TYPE
 }
 
-function isPragment(
+function isFragment(
   node: PreactENDElement,
 ): node is PreactENDElement<any, typeof PREACTEND_FRAGMENT_TYPE> {
   return node.type === PREACTEND_FRAGMENT_TYPE
