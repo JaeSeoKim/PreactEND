@@ -1,10 +1,10 @@
 import { test, expect } from "vitest"
-import { FPreactENDElement } from "../PreactENDElement"
+import { createPreactENDElement } from "../PreactENDElement"
 import { createElement } from "../createElement"
 import { jsx } from "../jsx-runtime"
 
 test("test basic creatElement", () => {
-  const targetElement = FPreactENDElement("div", null, null, {
+  const targetElement = createPreactENDElement("div", null, null, {
     style: {
       color: "red",
     },
@@ -20,14 +20,14 @@ test("test basic creatElement", () => {
 test("test creatElement with children", () => {
   const children = [
     "hello ",
-    FPreactENDElement("span", null, null, {
+    createPreactENDElement("span", null, null, {
       style: {
         color: "green",
       },
       children: ["string"],
     }),
   ]
-  const targetElement = FPreactENDElement("div", null, null, {
+  const targetElement = createPreactENDElement("div", null, null, {
     style: {
       color: "red",
     },

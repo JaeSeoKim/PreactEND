@@ -3,7 +3,7 @@ import type {
   PreactENDElementType,
   PreactENDNode,
 } from "./types"
-import { FPreactENDElement } from "./PreactENDElement"
+import { createPreactENDElement } from "./PreactENDElement"
 
 const RESERVED_PROPS = {
   key: true,
@@ -43,5 +43,5 @@ export function createElement<P extends object>(
     props.children = children
   }
 
-  return FPreactENDElement(type, key, ref, props)
+  return createPreactENDElement(type, key, ref, props)
 }

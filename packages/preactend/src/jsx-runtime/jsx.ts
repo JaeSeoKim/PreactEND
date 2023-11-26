@@ -1,4 +1,4 @@
-import { FPreactENDElement } from "../PreactENDElement"
+import { createPreactENDElement } from "../PreactENDElement"
 import { PreactENDElement, PreactENDElementType } from "../types"
 
 const RESERVED_PROPS = {
@@ -35,5 +35,5 @@ export function jsx<P extends object = any>(
     }
   }
 
-  return FPreactENDElement(type, key, ref, props)
+  return createPreactENDElement(type, key, ref, props)
 }

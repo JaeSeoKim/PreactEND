@@ -1,10 +1,10 @@
 import { test, expect } from "vitest"
-import { FPreactENDElement } from "../../PreactENDElement"
+import { createPreactENDElement } from "../../PreactENDElement"
 import { createElement } from "../../createElement"
 import { jsx } from "../../jsx-runtime"
 
-test("test basic creatElement", () => {
-  const targetElement = FPreactENDElement("div", null, null, {
+test("basic creatElement", () => {
+  const targetElement = createPreactENDElement("div", null, null, {
     style: {
       color: "red",
     },
@@ -17,17 +17,17 @@ test("test basic creatElement", () => {
   expect(element).toEqual(targetElement)
 })
 
-test("test creatElement with children", () => {
+test("creatElement with children", () => {
   const children = [
     "hello ",
-    FPreactENDElement("span", null, null, {
+    createPreactENDElement("span", null, null, {
       style: {
         color: "green",
       },
       children: ["string"],
     }),
   ]
-  const targetElement = FPreactENDElement("div", null, null, {
+  const targetElement = createPreactENDElement("div", null, null, {
     style: {
       color: "red",
     },
@@ -42,7 +42,7 @@ test("test creatElement with children", () => {
   expect(element).toEqual(targetElement)
 })
 
-test("test createElement === jsx", () => {
+test("createElement === jsx", () => {
   const jsxresult = jsx(
     "div",
     {
@@ -61,4 +61,26 @@ test("test createElement === jsx", () => {
   })
 
   expect(jsxresult).toEqual(createElementResult)
+})
+
+test("basic forward key", () => {
+  const element = jsx(
+    "div",
+    {
+      children: "Hello World!",
+    },
+    "maybeKey!",
+  )
+  expect(element.key).toBe("maybeKey!")
+})
+
+test("forward key form spread props", () => {
+  const objectWithKey = {
+    key: "key",
+  }
+  const element = jsx("div", {
+    ...objectWithKey,
+    children: "Hello World!",
+  })
+  expect(element.key).toBe("key")
 })

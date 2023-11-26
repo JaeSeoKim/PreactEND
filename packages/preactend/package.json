@@ -38,7 +38,8 @@
   ],
   "scripts": {
     "clean": "rimraf dist/ esm/ types/",
-    "build": "pnpm clean && pnpm lint && pnpm run \"/^build:(?!analyze).*/\"",
+    "prebuild": "pnpm clean && pnpm lint && pnpm test -- run",
+    "build": "pnpm prebuild && pnpm run \"/^build:(?!analyze).*/\"",
     "build:analyze": "rollup --config --configAnalyze",
     "build:bundle": "rollup -c",
     "build:type": "tsc -p tsconfig.build.json",
@@ -52,11 +53,11 @@
     "@configs/babel": "workspace:*",
     "@configs/eslint-config": "workspace:^",
     "@configs/rollup": "workspace:*",
-    "@types/node": "^20.9.3",
+    "@types/node": "^20.10.0",
     "eslint": "^8.54.0",
     "happy-dom": "^12.10.3",
     "rimraf": "^5.0.5",
-    "rollup": "^4.5.0",
+    "rollup": "^4.5.2",
     "typescript": "^5.3.2",
     "vitest": "^0.34.6"
   },
