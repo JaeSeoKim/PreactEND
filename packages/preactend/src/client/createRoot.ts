@@ -164,7 +164,12 @@ function isIntrinsicElements(
 }
 
 function isRenderableNode(
-  node: Exclude<PreactENDNode, PreactENDElement | Iterable<PreactENDElement>>,
+  node:
+    | Exclude<PreactENDNode, PreactENDElement | Iterable<PreactENDElement>>
+    | string,
 ): node is string | number {
-  return !!node && typeof node !== "boolean"
+  if (node === undefined || node === null || typeof node === "boolean") {
+    return false
+  }
+  return true
 }

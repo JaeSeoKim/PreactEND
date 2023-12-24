@@ -128,3 +128,9 @@ test("test unmount() with primitive type", () => {
   root.unmount()
   expect(document.getElementById("root")!.innerHTML).toBe("")
 })
+
+test("test rendering number 0", () => {
+  const root = createRoot(document.getElementById("root") as unknown as Element)
+  root.render(<>{0}</>)
+  expect(document.getElementById("root")!.innerHTML).toBe(`0`)
+})
